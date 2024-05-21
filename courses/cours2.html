@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+
+    <script src="/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="/style1.css">
+    <link rel="stylesheet" href="/about.css">
+    <link rel="stylesheet" href="/courses/courses.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <title>Course 2</title>
+
+
+</head>
+<body class="light-mode">
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses/indexcourses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-end">
+            <div class="form-inline" id="button-container">
+                <button class="btn btn-dark" id="dark-mode-toggle" style="border-radius: 10px;">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+   
+
+   
+    <div class="container mt-5">
+        <h1 style="margin-bottom: 40px;">Cyber Security Networking Basics</h1>
+    
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Protocols and Networking</h5>
+        <p>It is essential for Cyber Security Professionals to have a solid understanding of how computers communicate. There is much more happening behind the scenes of computer networks than what can be observed when using applications.</p>
+           
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # The OSI Model</h5>
+        <p>The OSI ("Open Systems Interconnection") model represents an easy and intuitive way to standardize the different parts required to communicate across networks.</p>
+        <p>The model makes it clear what is required to communicate on a network by splitting the requirements into multiple layers. </p>
+        <p>This is what the OSI Model looks like:</p>
+
+        <div class="image">
+            <img style="margin-bottom: 50px; width: 100%;" src="/images/osi model.png" alt="">
+        </div> 
+
+        
+        <p>The top 3 layers are typically implemented in software within the Operating System:</p>
+        <div class="image">
+            <img style="margin-bottom: 50px; width: 100%;" src="/images/Screenshot 2024-05-19 at 23.33.36.png" alt="">
+        </div> 
+        <p>The bottom 3 layers are typically implemented in hardware within devices on the network, e.g. Switches, Routers and Firewalls:</p>
+
+        <div class="image">
+            <img style="margin-bottom: 50px; width: 100%;" src="/images/Screenshot 2024-05-19 at 23.36.13.png" alt="">
+        </div> 
+
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 7 - Application Layer</h5>
+        <p>The business logic and functionality of the application lies here. This is what the users use to interact with services across a network. Most developers create applications on the Application Layer.</p>
+    
+        <p>Most of the applications you use are on the Application Layer, with the complexity of the other layers hidden.</p>  
+        <p>Examples of Layer 7 Applications:</p>
+        <li>HTTP ("Hypertext Transfer Protocol") - Enables us to access web applications</li>
+        <li>FTP ("File Transfer Protocol") - Allows users to transfer files</li>
+        <li>SNMP ("Simple Network Management Protocol") - Protocol to read and update network device configurations</li>
+
+        <p>There are many applications which uses these protocols like Google Chrome, Microsoft Skype and FileZilla.      </p>
+        <p style="color:#ef3830;margin-bottom: 20px;" >You are accessing this class via Layer 7!</p>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 6 - Presentation Layer</h5>
+
+        <p>Typically an unseen layer, but is responsible of adapting, transforming and translating data. This is to ensure the application and layers beneath can understand one another.    </p>
+        <li>Encoding Schemes used to represent text and data, for example ASCII(American Standard Code for Information Interchange) and UTF(Unicode Transformation Format).</li>
+
+        <li>Encryption for services, for example SSL ("Secure Sockets Layer") and TLS ("Transport Security Layer")  </li>
+        <li style="margin-bottom: 20px;">Compression, for example GZip in use in many implementations of HTTP.</li>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 5 - Session Layer</h5>
+
+        <p>  This layer's responsibility is handling connections between the application and the layers below. It involves establishing, maintaining and terminating connections, otherwise referred to as sessions.</p>
+
+        <p> Common protocols which represent the Session Layer well are:  </p>
+
+        <li>SOCKS - A protocol for sending packets through a proxy server.</li>
+
+        <li>NetBIOS - An older Windows protocol for establishing sessions and resolving names. </li>
+        <li style="margin-bottom: 20px;">SIP ("Session Initiation Protocol") - For engaging in VOIP ("Voice Over IP") communications  </li>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 4 - Transport</h5>
+        <p>The layer which allows applications to be represented on the network.</p>
+
+        <p> Some well known applications on this layer:</p>
+
+        <li>TCP ("Transmission Control Protocol") - Used for many applications, ensuring stability, control of how much data can be sent at any given time, reliability and more.</li>
+        <li>UDP ("User Datagram Protocol") - Lightweight and quick protocol use for many services.        </li>
+        <li style="margin-bottom: 20px;">QUIC ("Quick UDP Internet Connections") - A protocol designed for faster connections and goes hand-in-hand with the version 2 of the HTTP protocol.</li>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 3 - Network</h5>
+
+        <p>A layer responsible of routing packets between networks via routers.     </p>
+        <p>On this layer, the following protocols reside:     </p>
+        <li>IP ("Internet Protocol") - Used everyday when accessing the Internet. Comes in two versions, IP version 4 and 6.
+        </li>
+        <li>ICMP ("Internet Control Message Protocol") - Used by network devices and network operators, to diagnose network connections or for devices to send and respond to error conditions and more.</li>
+        <li style="margin-bottom: 20px;">IPSec ("Internet Protocol Security") - Allows encrypted and secure connections between two network devices.
+        </li>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 2 - Link</h5>
+        <p>Link networks, as the name implies, consist of protocols designed to send packets through the actual links (physical connections) that network nodes are connected to. A simpler way of thinking of it is that the Link Layer is responsible for moving data from physical over to logical (to the network layer).</p>
+        <p>Protocols on this layer include:</p>
+
+        <li>Ethernet - An essential protocol used by most operating systems when connecting to networks using a physical cable.</li>
+        <li>Wi-Fi ("Wireless Fidelity") - For accessing networks via radio signals. It uses a family of protocols called IEEE 802.11.xx</li>
+        <li style="margin-bottom: 20px;">NDP ("Neighbor Discovery Protocol") - IP version 6(IPv6) uses this protocol on the Link Layer to gather information required to communicate via IPv6</li>
+
+        <h5 style="margin-bottom: 20px;color:#ef3830 ;"> # Layer 1 - Physical</h5>
+
+        <p>Physical layer represents the signaling which allows bits and bytes to transfer between a physical medium. It can be transferred via radio or signals over a cable, using electrical signals or light, for example fiber.</p>
+        <p>Examples of the Physical Layer protocols includes:</p>
+        <li>CAN Bus ("Controller Area Network") - Used in microcontrollers and other devices to communicate to other similar devices, not involving a computer. Often used in ICS ("Industrial Control Systems").</li>
+        <li>Ethernet Physical Layer - Used by Ethernet on the physical layer to send signals with speeds up to many gigabits of traffic per second.</li>
+        <li style="margin-bottom: 200px;">Bluetooth Physical Layer - Bluetooth also has its own specifications on how radio signals should be sent and received.</li>
+
+
+
+
+
+
+
+
+
+
+
+
+        <a href="/quizes/quiz2.html"  class="fixed-bottom-right btn btn-primary">Take Quiz</a>
+        <a id="download-pdf" class="fixed-bottom-right btn btn-primary" style="position: fixed; bottom: 18px; right: 145px;" >
+            <i class="fas fa-file-arrow-down"></i> Download Course as PDF
+        </a>
+      
+
+        </div>
+
+
+    <footer class="footer mt-auto py-3 footer-custom">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Aji T3lem. All Rights Reserved</span>
+        </div>
+    </footer>
+</body>
+
+
+<script>
+    document.getElementById('download-pdf').addEventListener('click', function () {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        const lineHeight = 10;
+        const pageHeight = doc.internal.pageSize.height;
+        let yPosition = 30; // Adjust the Y position to leave space between the logo and text
+
+        const addText = (text, color = '#000', fontSize = 12, fontStyle = '') => {
+            doc.setTextColor(color);
+            doc.setFontSize(fontSize);
+            // Concatenate fontStyle with font name
+            doc.setFont('helvetica' + fontStyle);
+
+            const textLines = doc.splitTextToSize(text, 180);
+            textLines.forEach(line => {
+                if (yPosition + lineHeight > pageHeight) {
+                    doc.addPage();
+                    yPosition = 10;
+                }
+                doc.text(line, 10, yPosition);
+                yPosition += lineHeight;
+            });
+        };
+
+
+        // Add the text logo at the top of the page
+        const logoText = "Aji T3lem Courses";
+        const logoColor = '#ef3830'; // Red color
+        const logoFontSize = 20;
+        const logoFontWeight = 'bold'; // Font weight
+        const logoXPosition = (doc.internal.pageSize.width - doc.getStringUnitWidth(logoText) * logoFontSize * 0.3527) / 2; // Center align the logo text
+        
+        // Set font for the logo
+        // doc.setFont('helvetica');
+        doc.setFontSize(logoFontSize);
+        doc.setFont(undefined, logoFontWeight); // Apply font weight
+        doc.setTextColor(logoColor);
+        doc.text(logoText, logoXPosition, 10); // Adjust Y position as needed
+
+      
+       // Call the addText function with your content
+addText('Cyber Security Networking Basics', '#ef3830', 18, 'bold');
+addText('Protocols and Networking\nIt is essential for Cyber Security Professionals to have a solid understanding of how computers communicate. There is much more happening behind the scenes of computer networks than what can be observed when using applications.', '#000', 12);
+addText('The OSI Model\nThe OSI ("Open Systems Interconnection") model represents an easy and intuitive way to standardize the different parts required to communicate across networks. The model makes it clear what is required to communicate on a network by splitting the requirements into multiple layers.', '#000', 12);
+addText('Layer 7 - Application Layer\nThe business logic and functionality of the application lies here. This is what the users use to interact with services across a network. Most developers create applications on the Application Layer. Most of the applications you use are on the Application Layer, with the complexity of the other layers hidden.', '#000', 12);
+addText('Layer 6 - Presentation Layer\nTypically an unseen layer, but is responsible of adapting, transforming and translating data. This is to ensure the application and layers beneath can understand one another. Encoding Schemes used to represent text and data, for example ASCII(American Standard Code for Information Interchange) and UTF(Unicode Transformation Format). Encryption for services, for example SSL ("Secure Sockets Layer") and TLS ("Transport Security Layer"). Compression, for example GZip in use in many implementations of HTTP.', '#000', 12);
+addText('Layer 5 - Session Layer\nThis layer\'s responsibility is handling connections between the application and the layers below. It involves establishing, maintaining and terminating connections, otherwise referred to as sessions. Common protocols which represent the Session Layer well are: SOCKS - A protocol for sending packets through a proxy server. NetBIOS - An older Windows protocol for establishing sessions and resolving names. SIP ("Session Initiation Protocol") - For engaging in VOIP ("Voice Over IP") communications.', '#000', 12);
+addText('Layer 4 - Transport\nThe layer which allows applications to be represented on the network. Some well known applications on this layer: TCP ("Transmission Control Protocol") - Used for many applications, ensuring stability, control of how much data can be sent at any given time, reliability and more. UDP ("User Datagram Protocol") - Lightweight and quick protocol use for many services. QUIC ("Quick UDP Internet Connections") - A protocol designed for faster connections and goes hand-in-hand with the version 2 of the HTTP protocol.', '#000', 12);
+addText('Layer 3 - Network\nA layer responsible of routing packets between networks via routers. On this layer, the following protocols reside: IP ("Internet Protocol") - Used everyday when accessing the Internet. Comes in two versions, IP version 4 and 6. ICMP ("Internet Control Message Protocol") - Used by network devices and network operators, to diagnose network connections or for devices to send and respond to error conditions and more. IPSec ("Internet Protocol Security") - Allows encrypted and secure connections between two network devices.', '#000', 12);
+addText('Layer 2 - Link\nLink networks, as the name implies, consist of protocols designed to send packets through the actual links (physical connections) that network nodes are connected to. A simpler way of thinking of it is that the Link Layer is responsible for moving data from physical over to logical (to the network layer). Protocols on this layer include: Ethernet - An essential protocol used by most operating systems when connecting to networks using a physical cable. Wi-Fi ("Wireless Fidelity") - For accessing networks via radio signals. It uses a family of protocols called IEEE 802.11.xx. NDP ("Neighbor Discovery Protocol") - IP version 6(IPv6) uses this protocol on the Link Layer to gather information required to communicate via IPv6.', '#000', 12);
+addText('Layer 1 - Physical\nPhysical layer represents the signaling which allows bits and bytes to transfer between a physical medium. It can be transferred via radio or signals over a cable, using electrical signals or light, for example fiber. Examples of the Physical Layer protocols includes: CAN Bus ("Controller Area Network") - Used in microcontrollers and other devices to communicate to other similar devices, not involving a computer. Often used in ICS ("Industrial Control Systems"). Ethernet Physical Layer - Used by Ethernet on the physical layer to send signals with speeds up to many gigabits of traffic per second. Bluetooth Physical Layer - Bluetooth also has its own specifications on how radio signals should be sent and received.', '#000', 12);
+
+        doc.save('Networking Basics.pdf');
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+
+
+
+

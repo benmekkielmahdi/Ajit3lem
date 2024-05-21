@@ -1,0 +1,38 @@
+.image {
+    text-align: center;
+}
+
+/* Container for fixed position */
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    gap: 100px; /* Space between the buttons */
+}
+
+/* Style for the buttons to ensure they look nice */
+.btn {
+    padding: 10px 20px; /* Adjust as needed */
+    font-size: 17px; /* Adjust as needed */
+    border-radius: 8px; /* Adjust as needed */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Button text color */
+    display: inline-block; /* Ensure buttons are inline */
+    text-align: center; /* Center text inside buttons */
+    margin-right: 0px; /* Adjust space between the buttons */
+}
+
+
+ 
+/* 
+text-decoration: none;
+font-size: 1.1em;
+font-weight: 600;
+display: inline-block;
+padding: 0.9375em 2.1875em;
+letter-spacing: 1px;
+border-radius: 15px;
+margin-bottom: 40px;
+transition:  0.8s ease;
+margin-right: 12px; */ */
