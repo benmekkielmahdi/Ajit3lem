@@ -25,14 +25,18 @@
 
 
  
-/* 
-text-decoration: none;
-font-size: 1.1em;
-font-weight: 600;
-display: inline-block;
-padding: 0.9375em 2.1875em;
-letter-spacing: 1px;
-border-radius: 15px;
-margin-bottom: 40px;
-transition:  0.8s ease;
-margin-right: 12px; */ */
+.custom-card {
+    width: 100%; /* Adjust as needed */
+}
+
+.custom-card .card-img-top {
+    height: 300px; /* Make image larger */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.custom-card .btn {
+    margin-top: 30px;
+    margin-right: 10px; /* Add space between buttons */
+
+
+}

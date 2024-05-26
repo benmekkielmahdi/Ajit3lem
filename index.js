@@ -1,8 +1,8 @@
     // Define your courses data
     const courses = [
-        { title: "Course 1", description: "Cyber Crime", image: "images/crime.jpeg", link: "/courses/cours1.html" },
-        { title: "Course 2", description: "Networking Basics", image: "images/network.jpg", link: "/courses/cours2.html" },
-        { title: "Course 3", description: "Dark Web", image: "images/Dark Web.jpg", link: "#" },
+        { title: "Course 1", description: "Cyber Crime", image: "images/crime.jpeg", link: "/courses/cours1choix.html" },
+        { title: "Course 2", description: "Networking Basics", image: "images/network.jpg", link: "/courses/cours2choix.html" },
+        { title: "Course 3", description: "Dark Web", image: "images/Dark Web.jpg", link: "courses/cours3choix.html" },
         { title: "Course 4", description: "Firewalls", image: "images/firewall.png", link: "#" },
         { title: "Course 5", description: "Money Making Threats", image: "images/Money Making Threats.jpg", link: "#" },
         { title: "Course 6", description: "Network Layer", image: "images/Network Layer.webp", link: "#" },
@@ -81,6 +81,31 @@
 
 
 
-
+    function searchCourses(event) {
+        event.preventDefault();
+        const searchQuery = document.getElementById('search-input').value.toLowerCase().replace(/\s/g, ''); // Remove spaces from the search query
+        const courses = document.querySelectorAll('.course-item');
     
+        // Remove existing highlights
+        courses.forEach(course => {
+            course.style.border = "";
+        });
+    
+        let found = false;
+        courses.forEach(course => {
+            const courseName = course.getAttribute('data-course').toLowerCase().replace(/\s/g, ''); // Remove spaces from the course name
+            if (courseName.startsWith(searchQuery)) { // Check if the course name starts with the search query
+                course.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                course.style.border = "5px solid #ef3830"; // Highlight the course
+                setTimeout(() => {
+                    course.style.border = ""; // Remove highlight after 15 seconds
+                }, 15000);
+                found = true;
+            }
+        });
+    
+        if (!found) {
+            alert('Course not found!');
+        }
+    }
     

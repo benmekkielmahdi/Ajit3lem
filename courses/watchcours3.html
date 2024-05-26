@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course 3</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style1.css">
+    <link rel="stylesheet" href="courses.css">
+    <script src="/index.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body class="light-mode">
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses/indexcourses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-end">
+            <div class="form-inline" id="button-container">
+                <button class="btn btn-dark" id="dark-mode-toggle" style="border-radius: 10px;">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+<div class="container">
+    <div class="animation-container">
+        <dotlottie-player src="https://lottie.host/073d833d-1d6c-4457-ac1b-ec83efc4bd3c/B3L7n6JpXx.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+    </div>
+</div>
+
+<style>
+    .progress-bar {
+        width: 100%;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+    .progress {
+        height: 20px;
+        background-color: #ef3830;
+        width: 0;
+
+    }
+    #progress-text {
+        font-size: 25px; /* Adjust font size as needed */
+        margin-top: 5px; /* Add some space between progress and text */
+        color: #ef3830;
+        font-weight: 400;
+    }
+
+
+</style>
+
+<div class="container my-5">
+    
+    <div class="row">
+        <div class="col-md-10 mx-auto mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <div id="player"></div>
+            </div>
+            <h4 style="color: #ef3830;  text-align: center; font-weight: 200; margin-top: 50px;">Your learning progress</h4>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="progress-text">0% watched</p>
+        </div>
+    </div>
+</div>
+
+<a href="/quizes/quiz3.html" class="fixed-bottom-right btn btn-primary">Take Quiz</a>
+
+<footer class="footer mt-auto py-3 footer-custom">
+    <div class="container text-center">
+        <span class="text-muted">© 2024 Aji T3lem. All Rights Reserved</span>
+    </div>
+</footer>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    var player;
+    var progressElement = document.getElementById('progress');
+    var progressTextElement = document.getElementById('progress-text');
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '315',
+            width: '560',
+            videoId: 'mA8pNpPvrr0',
+            events: {
+                'onStateChange': onPlayerStateChange,
+                'onPlaybackRateChange': updateProgress,
+                'onPlaybackQualityChange': updateProgress,
+                'onError': updateProgress
+            }
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            setInterval(updateProgress, 1000);
+        }
+    }
+
+    function updateProgress() {
+        if (player && player.getDuration) {
+            var duration = player.getDuration();
+            var currentTime = player.getCurrentTime();
+            var progressPercentage = (currentTime / duration) * 100;
+            progressElement.style.width = progressPercentage + '%';
+            progressTextElement.textContent = Math.floor(progressPercentage) + '% watched';
+        }
+    }
+</script>
+
+</body>
+</html>
