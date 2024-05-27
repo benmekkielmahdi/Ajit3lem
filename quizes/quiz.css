@@ -55,3 +55,20 @@ button:hover {
     color: #16886e; /* Change color */
     margin-bottom: 10px; /* Space below the question number */
 }
+
+
+/* Responsive styles for screens 500px or less */
+@media (max-width: 500px) {
+    .quiz-container {
+        font-size: medium; /* Further reduce font size for smaller screens */
+        padding: 10px; /* Further adjust padding for smaller screens */
+        width: 100%;
+        margin-bottom: 50px; /* Further adjust margin for smaller screens */
+    }
+
+    .question-number {
+        font-size: 0.8em; /* Further reduce font size for smaller screens */
+    }
+
+
+}

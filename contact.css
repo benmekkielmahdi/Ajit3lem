@@ -109,3 +109,42 @@ body {
     font-size: 1.2em;
     height: 4vh; 
   }
+
+
+
+  /* Responsive styles for screens 500px or less */
+@media (max-width: 500px) {
+  .cards.contact {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center; /* Center cards horizontally on smaller screens */
+  }
+
+ 
+.container {
+    margin-top: 5px; /* Further reduce top margin for the container */
+}
+
+.card {
+    width: 80%; /* Make cards take full width on smaller screens */
+    margin: 10px auto; /* Center cards horizontally on smaller screens */
+}
+
+form {
+    margin-bottom: 30px; /* Further reduce bottom margin for the form */
+}
+
+form label {
+    font-size: x-small; /* Further reduce font size for labels */
+}
+
+form input,
+form textarea {
+    font-size: x-small; /* Further reduce font size for inputs and textareas */
+    padding: 3px; /* Further reduce padding for inputs and textareas */
+}
+
+  .container h2{
+    font-size: large;
+  }
+  
+}
