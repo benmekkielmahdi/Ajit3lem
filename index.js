@@ -1,25 +1,28 @@
     // Define your courses data
     const courses = [
-        { title: "Course 1", description: "Cyber Crime", image: "images/crime.jpeg", link: "/courses/cours1choix.html" },
-        { title: "Course 2", description: "Networking Basics", image: "images/network.jpg", link: "/courses/cours2choix.html" },
-        { title: "Course 3", description: "Dark Web", image: "images/Dark Web.jpg", link: "courses/cours3choix.html" },
-        { title: "Course 4", description: "Firewalls", image: "images/firewall.png", link: "#" },
-        { title: "Course 5", description: "Money Making Threats", image: "images/Money Making Threats.jpg", link: "#" },
-        { title: "Course 6", description: "Network Layer", image: "images/Network Layer.webp", link: "#" },
-        { title: "Course 7", description: "Network Transport", image: "images/Network Transport.png", link: "#" },
-        { title: "Course 8", description: "Web Applications", image: "images/Web Applications.jpg", link: "#" },
-        { title: "Course 9", description: "Network Mapping & Port Scanning", image: "images/Network Mapping & Port Scanning.jpg", link: "#" },
-        { title: "Course 10", description: "Network Attacks", image: "images/Network Attacks.jpg", link: "#" },
-        { title: "Course 11", description: "Web Application Attacks", image: "images/Web Application Attacks.jpg", link: "#" },
-        { title: "Course 12", description: "Wi-Fi Attacks", image: "images/Wi-Fi Attacks.webp", link: "#" },
-        { title: "Course 13", description: "Passwords", image: "images/Passwords  .jpg", link: "#" },
-        { title: "Course 14", description: "Penetration Testing & Social Engineering", image: "images/Penetration Testing & Social Engineering.webp", link: "#" },
-        { title: "Course 15", description: "Security Operations", image: "images/Security Operations.jpg", link: "#" }
+        { title: "Course 1", description: "Cyber Crime", image: "/images/crime.webp", link: "/courses/cours1choix.html" },
+        { title: "Course 2", description: "Networking Basics", image: "/images/network.webp", link: "/courses/cours2choix.html" },
+        { title: "Course 3", description: "Dark Web", image: "/images/Dark Web.webp", link: "courses/cours3choix.html" },
+        { title: "Course 4", description: "Firewalls", image: "/images/firewall.webp", link: "#" },
+        { title: "Course 5", description: "Money Making Threats", image: "/images/Money Making Threats.webp", link: "#" },
+        { title: "Course 6", description: "Network Layer", image: "/images//Network Layer.jpg", link: "#" },
+        { title: "Course 7", description: "Network Transport", image: "/images/Network Transport.webp", link: "#" },
+        { title: "Course 8", description: "Web Applications", image: "/images/Web-Applications.webp", link: "#" },
+        { title: "Course 9", description: "Network Mapping & Port Scanning", image: "/images/Network Mapping & Port Scanning.webp", link: "#" },
+        { title: "Course 10", description: "Network Attacks", image: "/images/Network Attacks.jpg", link: "#" },
+        { title: "Course 11", description: "Web Application Attacks", image: "/images/Web-Application-Attacks.webp", link: "#" },
+        { title: "Course 12", description: "Wi-Fi Attacks", image: "/images/Wi-Fi-Attacks.jpg", link: "#" },
+        { title: "Course 13", description: "Passwords", image: "/images/Passwords-.webp", link: "#" },
+        { title: "Course 14", description: "Penetration Testing & Social Engineering", image: "/images/Penetration Testing & Social Engineering.webp", link: "#" },
+        { title: "Course 15", description: "Security Operations", image: "/images/Security-Operations.webp", link: "#" }
         // Add more courses as needed
     ];
 
     // Function to populate the carousel with course slides
     function populateCarousel() {
+
+
+        
         const carouselInner = document.querySelector('#course-carousel .carousel-inner');
         carouselInner.innerHTML = ''; // Clear existing slides
 

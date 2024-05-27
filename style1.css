@@ -287,4 +287,43 @@
         }
 
         
-      
+        @media (max-width:500px) {
+
+.animation-container{
+    width: 15%;
+    height: 15%;
+}
+.jumbotron{
+
+    font-size: 14px;
+
+}
+.jumbotron h1{
+
+    font-size: 22px;
+
+}
+.btn-primary {
+    background-color: #ef3830;
+    border-color: #ef3830;
+    outline: 0;
+    font-size: smaller;
+}
+.search-input {
+         
+    height: 35px;
+    border: 2px solid #ef3830;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.5); /* white background with 50% opacity */
+
+
+}
+.btn btn-dark{
+
+    font-size: smaller;
+}
+
+
+
+        }
